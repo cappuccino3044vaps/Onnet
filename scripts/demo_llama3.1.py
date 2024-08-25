@@ -5,7 +5,7 @@ You are a helpful, respectful and honest assistant. Always answer as helpfully a
 <</SYS>>
 Write a story about llamas.Please answer in Japanese.[/INST]"""
 # ダウンロードしたModelをセット.
-llm = Llama(model_path="../models/Meta-Llama-3-8B-Instruct.Q6_K.gguf", n_gpu_layers=20)
+llm = Llama(model_path="../models/Meta-Llama-3-8B-Instruct.Q6_K.gguf", n_gpu_layers=10)
 # 生成実行
 output = llm(
     prompt,max_tokens=500,stop=["System:", "User:", "Assistant:"],echo=True,
