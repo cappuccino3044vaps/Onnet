@@ -1,8 +1,11 @@
 from llama_cpp import Llama
 
-llm = Llama(model_path="../models/Meta-Llama-3-8B-Instruct.Q6_K.gguf", n_gpu_layers=10)
+llm = Llama(model_path="../models/ELYZA-japanese-Llama-2-7b-instruct-q2_K.gguf", n_gpu_layers=30)
 
-
-out=llm("Q:朝は四本足、昼は二本足、夕は三本足。この生き物は何か？ A: ")
-
-print(out)
+while True:
+    user_input=input("You:")
+    if user_input.lower()in["q"]:
+        break
+    response=llm(user_input,max_tokens=128)
+    text=response['choices'][0]['text']
+    print(f"LLM:{text}")
