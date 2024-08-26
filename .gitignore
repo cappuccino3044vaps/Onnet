@@ -9,7 +9,11 @@ wheels/
 .venv
 
 #LLAMA model files
+model/
 *.gguf
 
+#cuda
+*.deb
 
-
+#llama.cpp
+llama.cpp
