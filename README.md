@@ -1,3 +1,2 @@
 # onett
-
-Describe your project here.
+Ollamaを活用したLLMチャットボット開発
